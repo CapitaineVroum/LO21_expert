@@ -4,21 +4,10 @@
 #include "proposition.h"
 #include "regle.h"
 
-/* ---------- PROPOSITIONS ---------- */
+/* Charge uniquement les propositions depuis un fichier */
+void chargerPropositions(const char *nomFichier, Proposition **base);
 
-/* Charge les propositions depuis un fichier .txt */
-void chargerPropositions(const char *nomFichier, Proposition **liste);
-
-/* Sauvegarde les propositions dans un fichier .txt */
-void sauvegarderPropositions(const char *nomFichier, Proposition *liste);
-
-
-/* ---------- REGLES ---------- */
-
-/* Charge les règles depuis un fichier .txt */
-void chargerRegles(const char *nomFichier, Regle **liste);
-
-/* Sauvegarde les règles dans un fichier .txt */
-void sauvegarderRegles(const char *nomFichier, Regle *liste);
+/* Charge uniquement les règles depuis un fichier */
+void chargerRegles(const char *nomFichier, Regle **base);
 
 #endif
