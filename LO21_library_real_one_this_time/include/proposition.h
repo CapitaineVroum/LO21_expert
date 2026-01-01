@@ -32,4 +32,7 @@ void changerValeur(Proposition *p, ValeurProposition nouvelleValeur);
 /* Libère toute la liste des propositions */
 void libererPropositions(Proposition *liste);
 
+/* Supprime une proposition de la liste par son nom */
+void supprimerProposition(Proposition **liste, const char *nom);
+
 #endif

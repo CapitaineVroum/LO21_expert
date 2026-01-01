@@ -16,4 +16,7 @@ int compterPropositions(Proposition *liste);
 /* Compte le nombre de règles */
 int compterRegles(Regle *liste);
 
+/* Supprime la règle numéro N (commence à 1) */
+void supprimerRegleParIndex(Regle **liste, int index);
+
 #endif

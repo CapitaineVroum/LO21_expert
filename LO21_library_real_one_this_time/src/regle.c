@@ -115,6 +115,42 @@ void ajouterRegle(Regle **liste, Regle *nouvelle) {
     }
 }
 
+void supprimerRegleParIndex(Regle **liste, int index) {
+    if (*liste == NULL || index < 1) return;
+
+    Regle *courant = *liste;
+    Regle *prec = NULL;
+    int i = 1;
+
+    while (courant != NULL) {
+        if (i == index) {
+            // Suppression du maillon
+            if (prec == NULL) {
+                *liste = courant->suiv;
+            } else {
+                prec->suiv = courant->suiv;
+            }
+
+            // Nettoyage mémoire de la règle
+            // (Assure-toi que libererConditions est bien accessible ou réimplémentée ici)
+            Condition *c = courant->premisses;
+            while (c != NULL) {
+                Condition *temp = c;
+                c = c->suiv;
+                free(temp->nom);
+                free(temp);
+            }
+
+            if (courant->conclusion) free(courant->conclusion);
+            free(courant);
+            return;
+        }
+        prec = courant;
+        courant = courant->suiv;
+        i++;
+    }
+}
+
 void libererRegles(Regle *liste) {
     Regle *courant = liste;
     while (courant != NULL) {

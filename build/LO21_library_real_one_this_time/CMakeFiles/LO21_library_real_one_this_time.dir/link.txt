@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libLO21_library_real_one_this_time.a CMakeFiles/LO21_library_real_one_this_time.dir/src/proposition.c.obj CMakeFiles/LO21_library_real_one_this_time.dir/src/regle.c.obj CMakeFiles/LO21_library_real_one_this_time.dir/src/liste.c.obj CMakeFiles/LO21_library_real_one_this_time.dir/src/parser.c.obj CMakeFiles/LO21_library_real_one_this_time.dir/src/inference.c.obj CMakeFiles/LO21_library_real_one_this_time.dir/src/io.c.obj
+C:\MinGW\bin\ranlib.exe libLO21_library_real_one_this_time.a

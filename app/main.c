@@ -122,6 +122,63 @@ void menuAjouterRegle(Regle **bc, Proposition *bf) {
     }
 }
 
+void menuSupprimerFait(Proposition **bf, Regle *bc) {
+    char nom[50];
+
+    printf("\n--- SUPPRESSION D'UN FAIT ---\n");
+    afficherPropositions(*bf);
+    printf("Nom du fait à supprimer : ");
+    lireChaine(nom, 50);
+
+    // 1. Sécurité : Vérifier s'il existe
+    Proposition *p = chercherProposition(*bf, nom);
+    if (p == NULL) {
+        printf("Erreur : Ce fait n'existe pas.\n");
+        return;
+    }
+
+    // 2. IMPORTANT : Invalider les conséquences AVANT de supprimer
+    // Car une fois supprimé, le moteur ne le trouvera plus pour dire "Ah tiens, il a changé"
+    // On considère que sa suppression équivaut à le passer à "INCONNU" pour le système
+    printf("Invalidation des déductions liées...\n");
+    invaliderConsequences(*bf, bc, nom);
+
+    // 3. Suppression effective
+    supprimerProposition(bf, nom);
+    printf("Fait '%s' supprimé de la base.\n", nom);
+
+    // 4. Relance du moteur (Optionnel, pour nettoyer l'affichage)
+    chainageAvant(bf, bc);
+}
+
+void menuSupprimerRegle(Regle **bc) {
+    int choix;
+
+    printf("\n--- SUPPRESSION D'UNE REGLE ---\n");
+    // On affiche les règles avec leur numéro
+    Regle *r = *bc;
+    int i = 1;
+    if (r == NULL) {
+        printf("(Aucune règle)\n");
+        return;
+    }
+    while (r != NULL) {
+        printf("%d. SI %s ... ALORS %s\n", i, tetePremisse(r), accederConclusion(r));
+        r = r->suiv;
+        i++;
+    }
+
+    printf("Numéro de la règle à supprimer : ");
+    if (scanf("%d", &choix) != 1) {
+        while(getchar() != '\n');
+        return;
+    }
+    viderBuffer();
+
+    supprimerRegleParIndex(bc, choix);
+    printf("Règle supprimée.\n");
+}
+
 int main() {
     Proposition *baseFaits = NULL;
     Regle *baseConnaissances = NULL;
@@ -133,11 +190,13 @@ int main() {
         printf("\n--- MENU PRINCIPAL ---\n");
         printf("1. Ajouter un FAIT (Créer)\n");
         printf("2. Modifier un FAIT (Active le recalcul)\n");
-        printf("3. Ajouter une REGLE\n");
-        printf("4. Afficher la Base de Faits\n");
-        printf("5. Afficher la Base de Règles\n");
-        printf("6. Lancer le Moteur d'Inférence\n");
-        printf("7. DEMO : Tester le TAD Regle\n");
+        printf("3. Supprimer un FAIT\n");
+        printf("4. Ajouter une REGLE\n");
+        printf("5. Supprimer une REGLE\n");
+        printf("6. Afficher la Base de Faits\n");
+        printf("7. Afficher la Base de Règles\n");
+        printf("8. Lancer le Moteur d'Inférence\n");
+        printf("9. DEMO : Tester le TAD Regle\n");
         printf("0. Quitter\n");
         printf("Votre choix : ");
 
@@ -156,19 +215,25 @@ int main() {
                 menuModifierFait(baseFaits, baseConnaissances);
                 break;
             case 3:
-                menuAjouterRegle(&baseConnaissances, baseFaits);
+                menuSupprimerFait(&baseFaits, baseConnaissances);
                 break;
             case 4:
+                menuAjouterRegle(&baseConnaissances, baseFaits);
+                break;
+            case 5:
+                menuSupprimerRegle(&baseConnaissances);
+                break;
+            case 6:
                 printf("\n--- FAITS ---\n");
                 if (baseFaits == NULL) printf("(Vide)\n");
                 else afficherPropositions(baseFaits);
                 break;
-            case 5:
+            case 7:
                 printf("\n--- REGLES ---\n");
                 if (baseConnaissances == NULL) printf("(Vide)\n");
                 else afficherRegles(baseConnaissances);
                 break;
-            case 6:
+            case 8:
                 printf("\n--- MOTEUR ---\n");
                 if (baseConnaissances == NULL) printf("Aucune règle.\n");
                 else {
@@ -177,7 +242,7 @@ int main() {
                     afficherPropositions(baseFaits);
                 }
                 break;
-            case 7:
+            case 9:
                 printf("\n--- DEMO TAD ---\n");
                 Regle *demo = creerRegleVide();
                 definirConclusion(demo, "TestConcl");
