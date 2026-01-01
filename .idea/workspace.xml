@@ -29,7 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e34ec260-2232-4bd0-8dde-1677968bde35" name="Changes" comment="re test" />
+    <list default="true" id="e34ec260-2232-4bd0-8dde-1677968bde35" name="Changes" comment="re test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +41,9 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="LO21_git_expert/main" />
+  </component>
   <component name="Git.Settings">
     <branch-grouping />
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -129,9 +134,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Debug.Project" />
-      <item itemvalue="CMake Application.LO21_library_real_one_this_time" />
       <item itemvalue="CMake Application.projet_expert" />
+      <item itemvalue="CMake Application.LO21_library_real_one_this_time" />
+      <item itemvalue="CMake Debug.Project" />
     </list>
     <recent_temporary>
       <list>
@@ -149,6 +154,7 @@
       <workItem from="1766939390691" duration="3367000" />
       <workItem from="1767192171286" duration="5268000" />
       <workItem from="1767266348820" duration="3009000" />
+      <workItem from="1767269418235" duration="851000" />
     </task>
     <task id="LOCAL-00001" summary="commit one">
       <option name="closed" value="true" />
@@ -206,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767269102942</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="re test">
+      <option name="closed" value="true" />
+      <created>1767269519516</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1767269519516</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +232,21 @@
     <isAutomaticReloadCMake value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="LO21_git_expert/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -233,7 +262,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="LO21_git_expert/main" />
+                        <option value="library_branch" />
                       </list>
                     </value>
                   </entry>
