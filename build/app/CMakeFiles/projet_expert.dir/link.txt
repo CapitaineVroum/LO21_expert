@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\projet_expert.dir/objects.a
-C:\MinGW\bin\ar.exe qc CMakeFiles\projet_expert.dir/objects.a @CMakeFiles\projet_expert.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe -Wl,--whole-archive CMakeFiles\projet_expert.dir/objects.a -Wl,--no-whole-archive -o projet_expert.exe -Wl,--out-implib,libprojet_expert.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\projet_expert.dir\linkLibs.rsp

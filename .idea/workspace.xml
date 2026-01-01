@@ -19,8 +19,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="systeme_expert" targetName="LO21_library_real_one_this_time" />
-      <config projectName="systeme_expert" targetName="projet_expert" />
+      <config projectName="LO21_TP4" targetName="LO21_TP4" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -29,13 +28,77 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e34ec260-2232-4bd0-8dde-1677968bde35" name="Changes" comment="test_branch">
+    <list default="true" id="737daf87-39b9-48a1-9923-8a0aa77971bb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/liste.h" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/liste.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/proposition.h" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/proposition.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/proposition.c" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/proposition.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/regle.c" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/regle.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/4.2.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/4.2.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/4.2.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/4.2.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/4.2.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/4.2.1/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/InstallScripts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/includes_C.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/inference.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/inference.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/io.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/io.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/liste.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/liste.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/parser.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/parser.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/proposition.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/proposition.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/regle.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/LO21_library_real_one_this_time.dir/src/regle.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/LO21_library_real_one_this_time/libLO21_library_real_one_this_time.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/includes_C.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/main.c.obj.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/CMakeFiles/projet_expert.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/app/projet_expert.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/compilateur.bat" beforeDir="false" afterPath="$PROJECT_DIR$/compilateur.bat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,35 +109,21 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="Git.Rebase.Settings">
-    <option name="NEW_BASE" value="LO21_git_expert/main" />
-  </component>
   <component name="Git.Settings">
-    <branch-grouping />
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="Donat" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/LO21_library_real_one_this_time" value="test_branch_full" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;CapitaineVroum&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "CapitaineVroum"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/CapitaineVroum/LO21_expert&quot;,
-    &quot;accountId&quot;: &quot;86838a8e-9595-481a-991b-60dae7477fe9&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CapitaineVroum/LO21_expert",
+    "accountId": "86838a8e-9595-481a-991b-60dae7477fe9"
   }
-}</component>
+}]]></component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2025" />
@@ -82,18 +131,17 @@
     <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="37TuTSJpvfz9wW7z6GT3BWCag2Z" />
+  <component name="ProjectId" id="351G0IeY8qKu5rfpPawTlY5TCFO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "CMake Application.LO21_library_real_one_this_time.executor": "Debug",
-    "CMake Application.projet_expert.executor": "Run",
-    "CMake Debug.Project.executor": "Debug",
+    "CMake Application.LO21_TP4.executor": "Run",
+    "CMake Application.Projet_expert.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -106,134 +154,51 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "test__branch",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/Donat/Documents/projet_expert",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Donat\Documents\projet_expert\LO21_library_real_one_this_time" />
-      <recent name="C:\Users\Donat\Documents\projet_expert\LO21_library_real_one_this_time\src" />
-    </key>
-  </component>
-  <component name="RunManager" selected="CMake Application.LO21_library_real_one_this_time">
-    <configuration name="Project" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="LO21_library_real_one_this_time" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="systeme_expert" TARGET_NAME="projet_expert" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="systeme_expert" RUN_TARGET_NAME="projet_expert">
+  <component name="RunManager" selected="CMake Application.Projet_expert">
+    <configuration name="LO21_library_real_one_this_time" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="systeme_expert" TARGET_NAME="LO21_library_real_one_this_time" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="projet_expert" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/LO21_library_real_one_this_time/cmake_install.cmake" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="Projet_expert" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="systeme_expert" TARGET_NAME="projet_expert" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="systeme_expert" RUN_TARGET_NAME="projet_expert">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.projet_expert" />
+      <item itemvalue="CMake Application.Projet_expert" />
       <item itemvalue="CMake Application.LO21_library_real_one_this_time" />
-      <item itemvalue="CMake Debug.Project" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="CMake Debug.Project" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e34ec260-2232-4bd0-8dde-1677968bde35" name="Changes" comment="" />
-      <created>1766939389558</created>
+      <changelist id="737daf87-39b9-48a1-9923-8a0aa77971bb" name="Changes" comment="" />
+      <created>1762269941890</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1766939389558</updated>
-      <workItem from="1766939390691" duration="3367000" />
-      <workItem from="1767192171286" duration="5268000" />
-      <workItem from="1767266348820" duration="3009000" />
-      <workItem from="1767269418235" duration="1636000" />
+      <updated>1762269941890</updated>
+      <workItem from="1762269945220" duration="2861000" />
+      <workItem from="1763480099397" duration="871000" />
+      <workItem from="1765302239727" duration="67000" />
+      <workItem from="1767273016976" duration="11000" />
+      <workItem from="1767273329854" duration="35000" />
     </task>
-    <task id="LOCAL-00001" summary="commit one">
-      <option name="closed" value="true" />
-      <created>1766940288662</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1766940288662</updated>
-    </task>
-    <task id="LOCAL-00002" summary="adding tad">
-      <option name="closed" value="true" />
-      <created>1766943358618</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1766943358618</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update rules">
-      <option name="closed" value="true" />
-      <created>1767193875863</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1767193875863</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update rules">
-      <option name="closed" value="true" />
-      <created>1767200911792</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1767200911792</updated>
-    </task>
-    <task id="LOCAL-00005" summary="tets library">
-      <option name="closed" value="true" />
-      <created>1767268617412</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1767268617412</updated>
-    </task>
-    <task id="LOCAL-00006" summary="full">
-      <option name="closed" value="true" />
-      <created>1767268809329</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1767268809329</updated>
-    </task>
-    <task id="LOCAL-00007" summary="re test">
-      <option name="closed" value="true" />
-      <created>1767269102942</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1767269102942</updated>
-    </task>
-    <task id="LOCAL-00008" summary="re test">
-      <option name="closed" value="true" />
-      <created>1767269519516</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1767269519516</updated>
-    </task>
-    <task id="LOCAL-00009" summary="test_branch">
-      <option name="closed" value="true" />
-      <created>1767270324717</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1767270324717</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,58 +208,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="LO21_git_expert/main" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="test_branch" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit one" />
-    <MESSAGE value="adding tad" />
-    <MESSAGE value="update rules" />
-    <MESSAGE value="tets library" />
-    <MESSAGE value="full" />
-    <MESSAGE value="re test" />
-    <MESSAGE value="test_branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_branch" />
   </component>
 </project>

@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"C:/Users/Donat/Documents/projet_expert/build/cmake_install.cmake",
-		"C:/Users/Donat/Documents/projet_expert/build/LO21_library_real_one_this_time/cmake_install.cmake",
-		"C:/Users/Donat/Documents/projet_expert/build/app/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
