@@ -1,10 +1,7 @@
-add_library(LO21_library_real_one_this_time STATIC
-    src/proposition.c
-    src/regle.c
-    src/liste.c
-    src/parser.c
-    src/inference.c
-    src/io.c
-)
+cmake_minimum_required(VERSION 4.0)
+project(systeme_expert C)
 
-target_include_directories(LO21_library_real_one_this_time PUBLIC include)
+set(CMAKE_C_STANDARD 11)
+
+add_subdirectory(LO21_library_real_one_this_time)
+add_subdirectory(app)

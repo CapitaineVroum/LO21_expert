@@ -1,0 +1,3 @@
+add_executable(projet_expert main.c)
+
+target_link_libraries(projet_expert LO21_library_real_one_this_time)
