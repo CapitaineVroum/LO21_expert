@@ -28,6 +28,11 @@ void definirConclusion(Regle *r, const char *conclusion) {
 void ajouterPropositionPremisse(Regle *r, const char *nomProposition, int valeurAttendue) {
     if (r == NULL) return;
 
+    if (appartientPremisse(r->premisses, nomProposition)) {
+        printf("   (Info : Condition '%s' deja presente, doublon ignore)\n", nomProposition);
+        return;
+    }
+
     Condition *nouv = malloc(sizeof(Condition));
     nouv->nom = malloc(strlen(nomProposition) + 1);
     strcpy(nouv->nom, nomProposition);

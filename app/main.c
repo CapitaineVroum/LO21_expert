@@ -114,6 +114,86 @@ void menuAjouterRegle(Regle **bc, Proposition *bf) {
     }
 }
 
+void menuModifierRegle(Regle *bc, Proposition *bf) {
+    if (bc == NULL) {
+        printf("Aucune règle à modifier.\n");
+        return;
+    }
+
+    /* 1. Sélection de la règle */
+    printf("\n--- MODIFIER UNE REGLE ---\n");
+    Regle *courant = bc;
+    int i = 1;
+    while (courant != NULL) {
+        printf("%d. SI %s ... ALORS %s\n", i, tetePremisse(courant), accederConclusion(courant));
+        courant = courant->suiv;
+        i++;
+    }
+
+    int choixRegle;
+    printf("Numero de la règle : ");
+    if (scanf("%d", &choixRegle) != 1) { viderBuffer(); return; }
+    viderBuffer();
+
+    /* On retrouve le pointeur vers la règle choisie */
+    Regle *r = bc;
+    for (int k = 1; k < choixRegle && r != NULL; k++) r = r->suiv;
+
+    if (r == NULL) { printf("Règle introuvable.\n"); return; }
+
+    /* 2. Sous-menu de modification */
+    int sousChoix = 0;
+    do {
+        printf("\n--- REGLE ACTUELLE ---\n");
+        printf("SI ");
+        Condition *c = r->premisses;
+        while (c != NULL) {
+            printf("%s=%d ", c->nom, c->valeurAttendue);
+            if (c->suiv) printf("ET ");
+            c = c->suiv;
+        }
+        printf("ALORS %s\n", r->conclusion);
+        printf("----------------------\n");
+        printf("1. Ajouter une condition\n");
+        printf("2. Supprimer une condition\n");
+        printf("0. Retour\n");
+        printf("Votre choix : ");
+        scanf("%d", &sousChoix); viderBuffer();
+
+        if (sousChoix == 1) {
+            char buffer[50];
+            int val;
+            printf("Nom de la prémisse à ajouter : ");
+            lireChaine(buffer, 50);
+
+            /* C'est ici qu'on utilise appartientPremisse pour éviter les doublons */
+            /* (Si tu as mis la sécurité dans regle.c, c'est automatique, sinon on peut le tester ici) */
+            if (appartientPremisse(r->premisses, buffer)) {
+                printf("Erreur : Cette condition existe déjà !\n");
+            } else {
+                printf("Valeur (1=VRAI, 0=FAUX) : ");
+                scanf("%d", &val); viderBuffer();
+                ajouterPropositionPremisse(r, buffer, val);
+                printf("Condition ajoutée.\n");
+            }
+
+        } else if (sousChoix == 2) {
+            char buffer[50];
+            printf("Nom de la prémisse à supprimer : ");
+            lireChaine(buffer, 50);
+
+            /* C'est ici qu'on utilise supprimerPropositionPremisse */
+            if (appartientPremisse(r->premisses, buffer)) {
+                supprimerPropositionPremisse(r, buffer);
+                printf("Condition supprimée.\n");
+            } else {
+                printf("Erreur : Cette condition n'est pas dans la règle.\n");
+            }
+        }
+
+    } while (sousChoix != 0);
+}
+
 void menuSupprimerFait(Proposition **bf, Regle *bc) {
     char nom[50];
     printf("\n--- SUPPRESSION D'UN FAIT ---\n");
@@ -203,12 +283,13 @@ int main() {
         printf("2. Modifier un FAIT (Vrai/Faux/Inconnu)\n");
         printf("3. Supprimer un FAIT\n");
         printf("4. Ajouter une REGLE\n");
-        printf("5. Supprimer une REGLE\n");
-        printf("6. Afficher la Base de Faits\n");
-        printf("7. Afficher la Base de Règles\n");
-        printf("8. Lancer le Moteur d'Inférence\n");
-        printf("9. CHARGER UNE BASE DEPUIS FICHIERS\n");
-        printf("10. SAUVEGARDER la base\n");
+        printf("5. MODIFIER UNE REGLE (Ajout/Suppr prémisse)\n");
+        printf("6. Supprimer une REGLE\n");
+        printf("7. Afficher la Base de Faits\n");
+        printf("8. Afficher la Base de Règles\n");
+        printf("9. Lancer le Moteur d'Inférence\n");
+        printf("10. CHARGER UNE BASE DEPUIS FICHIERS\n");
+        printf("11. SAUVEGARDER la base\n");
         printf("0. Quitter\n");
         printf("Votre choix : ");
 
@@ -232,19 +313,22 @@ int main() {
                 menuAjouterRegle(&baseConnaissances, baseFaits);
                 break;
             case 5:
-                menuSupprimerRegle(&baseConnaissances);
+                menuModifierRegle(baseConnaissances, baseFaits);
                 break;
             case 6:
+                menuSupprimerRegle(&baseConnaissances);
+                break;
+            case 7:
                 printf("\n--- FAITS ---\n");
                 if (baseFaits == NULL) printf("(Vide)\n");
                 else afficherPropositions(baseFaits);
                 break;
-            case 7:
+            case 8:
                 printf("\n--- REGLES ---\n");
                 if (baseConnaissances == NULL) printf("(Vide)\n");
                 else afficherRegles(baseConnaissances);
                 break;
-            case 8:
+            case 9:
                 printf("\n--- MOTEUR ---\n");
                 if (baseConnaissances == NULL) printf("Aucune règle.\n");
                 else {
@@ -252,10 +336,11 @@ int main() {
                     printf("\n--- RESULTAT ---\n");
                     afficherPropositions(baseFaits);
                 }
-            case 9:
-                menuCharger(&baseFaits, &baseConnaissances);
                 break;
             case 10:
+                menuCharger(&baseFaits, &baseConnaissances);
+                break;
+            case 11:
                 menuSauvegarder(baseFaits, baseConnaissances);
                 break;
             case 0:
