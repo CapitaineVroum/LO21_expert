@@ -175,6 +175,21 @@ void menuCharger(Proposition **bf, Regle **bc) {
     chargerBase(fProps, fRegles, bf, bc);
 }
 
+void menuSauvegarder(Proposition *bf, Regle *bc) {
+    char fProps[50];
+    char fRegles[50];
+
+    printf("\n--- SAUVEGARDE DE LA BASE ---\n");
+    printf("Nom du fichier pour les FAITS (ex: faits_save.txt) : ");
+    lireChaine(fProps, 50);
+
+    printf("Nom du fichier pour les REGLES (ex: regles_save.txt) : ");
+    lireChaine(fRegles, 50);
+
+    // Appel à la fonction de haut niveau dans io.c
+    sauvegarderBase(fProps, fRegles, bf, bc);
+}
+
 int main() {
     Proposition *baseFaits = NULL;
     Regle *baseConnaissances = NULL;
@@ -193,6 +208,7 @@ int main() {
         printf("7. Afficher la Base de Règles\n");
         printf("8. Lancer le Moteur d'Inférence\n");
         printf("9. CHARGER UNE BASE DEPUIS FICHIERS\n");
+        printf("10. SAUVEGARDER la base\n");
         printf("0. Quitter\n");
         printf("Votre choix : ");
 
@@ -239,9 +255,14 @@ int main() {
             case 9:
                 menuCharger(&baseFaits, &baseConnaissances);
                 break;
+            case 10:
+                menuSauvegarder(baseFaits, baseConnaissances);
                 break;
-            case 0: printf("Au revoir.\n"); break;
-            default: printf("Choix invalide.\n");
+            case 0:
+                printf("Au revoir.\n");
+                break;
+            default:
+                printf("Choix invalide.\n");
         }
     } while (choix != 0);
 

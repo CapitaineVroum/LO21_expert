@@ -76,3 +76,53 @@ void chargerRegles(const char *nomFichier, Regle **base) {
     }
     fclose(f);
 }
+
+void sauvegarderPropositions(const char *nomFichier, Proposition *base) {
+    FILE *f = fopen(nomFichier, "w");
+    if (f == NULL) {
+        printf("  [ERREUR] Impossible de créer le fichier faits : %s\n", nomFichier);
+        return;
+    }
+
+    Proposition *courant = base;
+    while (courant != NULL) {
+        // On ne sauvegarde que les faits avérés (VRAI)
+        if (courant->valeur == VALEUR_VRAIE) {
+            fprintf(f, "%s\n", courant->nom);
+        }
+        courant = courant->suiv;
+    }
+
+    fclose(f);
+    printf("  + Faits sauvegardés dans %s\n", nomFichier);
+}
+
+void sauvegarderRegles(const char *nomFichier, Regle *base) {
+    FILE *f = fopen(nomFichier, "w");
+    if (f == NULL) {
+        printf("  [ERREUR] Impossible de créer le fichier règles : %s\n", nomFichier);
+        return;
+    }
+
+    Regle *r = base;
+    while (r != NULL) {
+        // 1. Ecrire la conclusion
+        if (r->conclusion != NULL) {
+            fprintf(f, "%s", r->conclusion);
+        }
+
+        // 2. Ecrire les prémisses (Format: Nom=Valeur)
+        Condition *c = r->premisses;
+        while (c != NULL) {
+            fprintf(f, " %s=%d", c->nom, c->valeurAttendue);
+            c = c->suiv;
+        }
+
+        // Fin de ligne pour passer à la règle suivante
+        fprintf(f, "\n");
+        r = r->suiv;
+    }
+
+    fclose(f);
+    printf("  + Règles sauvegardées dans %s\n", nomFichier);
+}
