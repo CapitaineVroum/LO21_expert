@@ -76,11 +76,10 @@ void supprimerProposition(Proposition **liste, const char *nom) {
 
     while (courant != NULL) {
         if (strcmp(courant->nom, nom) == 0) {
-            // On a trouvé le maillon à supprimer
             if (prec == NULL) {
-                *liste = courant->suiv; // C'était la tête
+                *liste = courant->suiv;
             } else {
-                prec->suiv = courant->suiv; // C'était au milieu ou fin
+                prec->suiv = courant->suiv;
             }
             free(courant->nom);
             free(courant);

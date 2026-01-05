@@ -5,7 +5,7 @@
 #include "proposition.h"
 #include "regle.h"
 
-/* Helper pour nettoyer les fins de ligne */
+/* nettoyer les fins de ligne */
 void nettoyerChaine(char *str) {
     char *p = strchr(str, '\n');
     if (p) *p = '\0';
@@ -26,11 +26,28 @@ void chargerPropositions(const char *nomFichier, Proposition **base) {
         nettoyerChaine(buffer);
         if (strlen(buffer) == 0) continue;
 
-        if (chercherProposition(*base, buffer) == NULL) {
-            Proposition *p = creerProposition(buffer);
-            changerValeur(p, VALEUR_VRAIE);
+        char nom[50];
+        int val = 1; // Par défaut VRAI si pas de =
+
+        // On cherche le signe '='
+        char *egal = strchr(buffer, '=');
+
+        if (egal != NULL) {
+            *egal = '\0'; // Coupe la chaîne ici
+            strcpy(nom, buffer); // Copie la partie avant le =
+            val = atoi(egal + 1); // Convertit la partie après le = en int
+        } else {
+            strcpy(nom, buffer);
+        }
+
+        if (chercherProposition(*base, nom) == NULL) {
+            Proposition *p = creerProposition(nom);
+
+            if (val == 1) changerValeur(p, VALEUR_VRAIE);
+            else if (val == 0) changerValeur(p, VALEUR_FAUSSE);
+            else changerValeur(p, VALEUR_INCONNUE);
+
             ajouterProposition(base, p);
-            printf("  + Fait chargé : %s\n", buffer);
         }
     }
     fclose(f);
@@ -86,13 +103,9 @@ void sauvegarderPropositions(const char *nomFichier, Proposition *base) {
 
     Proposition *courant = base;
     while (courant != NULL) {
-        // On ne sauvegarde que les faits avérés (VRAI)
-        if (courant->valeur == VALEUR_VRAIE) {
-            fprintf(f, "%s\n", courant->nom);
-        }
+        fprintf(f, "%s=%d\n", courant->nom, courant->valeur);
         courant = courant->suiv;
     }
-
     fclose(f);
     printf("  + Faits sauvegardés dans %s\n", nomFichier);
 }
@@ -118,7 +131,6 @@ void sauvegarderRegles(const char *nomFichier, Regle *base) {
             c = c->suiv;
         }
 
-        // Fin de ligne pour passer à la règle suivante
         fprintf(f, "\n");
         r = r->suiv;
     }

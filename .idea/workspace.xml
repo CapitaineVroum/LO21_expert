@@ -30,9 +30,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737daf87-39b9-48a1-9923-8a0aa77971bb" name="Changes" comment="à test tout marche chez moi">
+    <list default="true" id="737daf87-39b9-48a1-9923-8a0aa77971bb" name="Changes" comment="couillonnage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/regle.h" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/regle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/inference.h" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/include/inference.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/inference.c" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/inference.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/proposition.c" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/proposition.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/regle.c" beforeDir="false" afterPath="$PROJECT_DIR$/LO21_library_real_one_this_time/src/regle.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.c" afterDir="false" />
     </list>
@@ -131,7 +134,7 @@
       <workItem from="1767273329854" duration="2559000" />
       <workItem from="1767371119682" duration="819000" />
       <workItem from="1767460171906" duration="1790000" />
-      <workItem from="1767606129418" duration="312000" />
+      <workItem from="1767606129418" duration="1064000" />
     </task>
     <task id="LOCAL-00001" summary="full push tout y est">
       <option name="closed" value="true" />
@@ -165,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767461791294</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="couillonnage">
+      <option name="closed" value="true" />
+      <created>1767606517831</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767606517831</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +192,7 @@
     <MESSAGE value="final à test" />
     <MESSAGE value="à test marche chez moi" />
     <MESSAGE value="à test tout marche chez moi" />
-    <option name="LAST_COMMIT_MESSAGE" value="à test tout marche chez moi" />
+    <MESSAGE value="couillonnage" />
+    <option name="LAST_COMMIT_MESSAGE" value="couillonnage" />
   </component>
 </project>

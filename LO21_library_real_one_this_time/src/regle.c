@@ -48,16 +48,15 @@ void ajouterPropositionPremisse(Regle *r, const char *nomProposition, int valeur
     }
 }
 
-/* 4. Test d'appartenance RECURSIF (Requis par le sujet + futur menu Modifier) */
+/* 4. Test d'appartenance RECURSIF */
 int appartientPremisse(Condition *c, const char *nomProposition) {
-    if (c == NULL) return 0; // Cas de base : liste vide ou fin atteinte
+    if (c == NULL) return 0;
+    if (strcmp(c->nom, nomProposition) == 0) return 1;
 
-    if (strcmp(c->nom, nomProposition) == 0) return 1; // Trouvé !
-
-    return appartientPremisse(c->suiv, nomProposition); // Appel récursif
+    return appartientPremisse(c->suiv, nomProposition);
 }
 
-/* 5. Supprimer une proposition de la prémisse (Requis par le sujet + futur menu Modifier) */
+/* 5. Supprimer une proposition de la prémisse */
 void supprimerPropositionPremisse(Regle *r, const char *nomProposition) {
     if (r == NULL || r->premisses == NULL) return;
 
@@ -66,16 +65,14 @@ void supprimerPropositionPremisse(Regle *r, const char *nomProposition) {
 
     while (courant != NULL) {
         if (strcmp(courant->nom, nomProposition) == 0) {
-            // On a trouvé, on supprime
             if (prec == NULL) {
-                // C'était la tête
                 r->premisses = courant->suiv;
             } else {
                 prec->suiv = courant->suiv;
             }
             free(courant->nom);
             free(courant);
-            return; // On supprime la première occurrence et on sort
+            return;
         }
         prec = courant;
         courant = courant->suiv;
@@ -124,7 +121,6 @@ void supprimerRegleParIndex(Regle **liste, int index) {
 
     while (courant != NULL) {
         if (i == index) {
-            // Suppression du maillon
             if (prec == NULL) {
                 *liste = courant->suiv;
             } else {

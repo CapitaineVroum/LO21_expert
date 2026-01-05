@@ -135,7 +135,6 @@ void menuModifierRegle(Regle *bc, Proposition *bf) {
     if (scanf("%d", &choixRegle) != 1) { viderBuffer(); return; }
     viderBuffer();
 
-    /* On retrouve le pointeur vers la règle choisie */
     Regle *r = bc;
     for (int k = 1; k < choixRegle && r != NULL; k++) r = r->suiv;
 
@@ -166,8 +165,6 @@ void menuModifierRegle(Regle *bc, Proposition *bf) {
             printf("Nom de la prémisse à ajouter : ");
             lireChaine(buffer, 50);
 
-            /* C'est ici qu'on utilise appartientPremisse pour éviter les doublons */
-            /* (Si tu as mis la sécurité dans regle.c, c'est automatique, sinon on peut le tester ici) */
             if (appartientPremisse(r->premisses, buffer)) {
                 printf("Erreur : Cette condition existe déjà !\n");
             } else {
@@ -182,7 +179,6 @@ void menuModifierRegle(Regle *bc, Proposition *bf) {
             printf("Nom de la prémisse à supprimer : ");
             lireChaine(buffer, 50);
 
-            /* C'est ici qu'on utilise supprimerPropositionPremisse */
             if (appartientPremisse(r->premisses, buffer)) {
                 supprimerPropositionPremisse(r, buffer);
                 printf("Condition supprimée.\n");
@@ -250,8 +246,6 @@ void menuCharger(Proposition **bf, Regle **bc) {
 
     printf("Nom du fichier de REGLES (ex: regles.txt) : ");
     lireChaine(fRegles, 50);
-
-    // On appelle la fonction de io.c qui va orchestrer le tout
     chargerBase(fProps, fRegles, bf, bc);
 }
 
@@ -265,8 +259,6 @@ void menuSauvegarder(Proposition *bf, Regle *bc) {
 
     printf("Nom du fichier pour les REGLES (ex: regles_save.txt) : ");
     lireChaine(fRegles, 50);
-
-    // Appel à la fonction de haut niveau dans io.c
     sauvegarderBase(fProps, fRegles, bf, bc);
 }
 

@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-/* --- FONCTIONS UTILITAIRES (A placer au début) --- */
 
 /* Vérifie si un nom est présent dans une liste de conditions */
 int estDansConditions(Condition *liste, const char *nom) {
@@ -51,7 +50,6 @@ void invaliderConsequences(Proposition *propositions, Regle *regles, const char 
                 printf("  [REVISION] '%s' est remis à INCONNU car '%s' a changé.\n",
                        concl->nom, nomFaitModifie);
 
-                // Récursivité : on invalide ceux qui dépendaient de cette conclusion
                 invaliderConsequences(propositions, regles, concl->nom);
             }
         }
@@ -59,7 +57,7 @@ void invaliderConsequences(Proposition *propositions, Regle *regles, const char 
     }
 }
 
-/* Moteur d'inférence (Chainage Avant) */
+/* Moteur d'inférence */
 void chainageAvant(Proposition **propositions, Regle *regles) {
     int changement = 1;
     int iteration = 0;
