@@ -24,23 +24,19 @@ void definirConclusion(Regle *r, const char *conclusion) {
     strcpy(r->conclusion, conclusion);
 }
 
-/* Utlitaire interne pour créer une condition */
-Condition* creerConditionNode(const char *nom) {
-    Condition *c = malloc(sizeof(Condition));
-    c->nom = malloc(strlen(nom) + 1);
-    strcpy(c->nom, nom);
-    c->suiv = NULL;
-    return c;
-}
-
 /* 3. Ajouter en queue de prémisse */
 void ajouterPropositionPremisse(Regle *r, const char *nomProposition, int valeurAttendue) {
     if (r == NULL) return;
 
+    if (appartientPremisse(r->premisses, nomProposition)) {
+        printf("   (Info : Condition '%s' deja presente, doublon ignore)\n", nomProposition);
+        return;
+    }
+
     Condition *nouv = malloc(sizeof(Condition));
     nouv->nom = malloc(strlen(nomProposition) + 1);
     strcpy(nouv->nom, nomProposition);
-    nouv->valeurAttendue = valeurAttendue; // <--- NOUVEAU
+    nouv->valeurAttendue = valeurAttendue;
     nouv->suiv = NULL;
 
     if (r->premisses == NULL) {
@@ -52,7 +48,7 @@ void ajouterPropositionPremisse(Regle *r, const char *nomProposition, int valeur
     }
 }
 
-/* 4. Test d'appartenance RECURSIF */
+/* 4. Test d'appartenance RECURSIF (Requis par le sujet + futur menu Modifier) */
 int appartientPremisse(Condition *c, const char *nomProposition) {
     if (c == NULL) return 0; // Cas de base : liste vide ou fin atteinte
 
@@ -61,7 +57,7 @@ int appartientPremisse(Condition *c, const char *nomProposition) {
     return appartientPremisse(c->suiv, nomProposition); // Appel récursif
 }
 
-/* 5. Supprimer une proposition de la prémisse */
+/* 5. Supprimer une proposition de la prémisse (Requis par le sujet + futur menu Modifier) */
 void supprimerPropositionPremisse(Regle *r, const char *nomProposition) {
     if (r == NULL || r->premisses == NULL) return;
 
@@ -103,7 +99,7 @@ char* accederConclusion(Regle *r) {
     return r->conclusion;
 }
 
-/* --- FONCTIONS LISTE REGLE (Inchangées ou adaptées) --- */
+/* --- FONCTIONS LISTE REGLE --- */
 
 void ajouterRegle(Regle **liste, Regle *nouvelle) {
     if (*liste == NULL) {
@@ -112,6 +108,45 @@ void ajouterRegle(Regle **liste, Regle *nouvelle) {
         Regle *courant = *liste;
         while (courant->suiv != NULL) courant = courant->suiv;
         courant->suiv = nouvelle;
+    }
+}
+
+Regle* accesTeteBase(Regle *base) {
+    return base;
+}
+
+void supprimerRegleParIndex(Regle **liste, int index) {
+    if (*liste == NULL || index < 1) return;
+
+    Regle *courant = *liste;
+    Regle *prec = NULL;
+    int i = 1;
+
+    while (courant != NULL) {
+        if (i == index) {
+            // Suppression du maillon
+            if (prec == NULL) {
+                *liste = courant->suiv;
+            } else {
+                prec->suiv = courant->suiv;
+            }
+
+            // Nettoyage mémoire de la règle
+            Condition *c = courant->premisses;
+            while (c != NULL) {
+                Condition *temp = c;
+                c = c->suiv;
+                free(temp->nom);
+                free(temp);
+            }
+
+            if (courant->conclusion) free(courant->conclusion);
+            free(courant);
+            return;
+        }
+        prec = courant;
+        courant = courant->suiv;
+        i++;
     }
 }
 
