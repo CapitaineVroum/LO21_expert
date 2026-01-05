@@ -53,7 +53,8 @@ void menuModifierFait(Proposition *bf, Regle *bc) {
 
     printf("Nouvelle valeur (1=VRAI, 0=FAUX, -1=INCONNU) : ");
     if (scanf("%d", &val) != 1) {
-        while(getchar() != '\n'); val = -2;
+        while(getchar() != '\n');
+        val = -2;
     }
     viderBuffer();
 
@@ -132,7 +133,11 @@ void menuModifierRegle(Regle *bc, Proposition *bf) {
 
     int choixRegle;
     printf("Numero de la règle : ");
-    if (scanf("%d", &choixRegle) != 1) { viderBuffer(); return; }
+    if (scanf("%d", &choixRegle) != 1) {
+        viderBuffer();
+        return;
+    }
+
     viderBuffer();
 
     Regle *r = bc;
@@ -286,7 +291,8 @@ int main() {
         printf("Votre choix : ");
 
         if (scanf("%d", &choix) != 1) {
-            while(getchar() != '\n'); choix = -1;
+            while(getchar() != '\n')
+                ; choix = -1;
         } else {
             viderBuffer();
         }

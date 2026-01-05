@@ -48,6 +48,7 @@ void chargerPropositions(const char *nomFichier, Proposition **base) {
             else changerValeur(p, VALEUR_INCONNUE);
 
             ajouterProposition(base, p);
+            printf("  + Fait chargé : %s (Val=%d)\n", p->nom, p->valeur);
         }
     }
     fclose(f);
