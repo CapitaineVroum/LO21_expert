@@ -122,7 +122,7 @@ void menuModifierRegle(Regle *bc, Proposition *bf) {
 
     /* 1. Sélection de la règle */
     printf("\n--- MODIFIER UNE REGLE ---\n");
-    Regle *courant = bc;
+    Regle *courant = accesTeteBase(bc);
     int i = 1;
     while (courant != NULL) {
         printf("%d. SI %s ... ALORS %s\n", i, tetePremisse(courant), accederConclusion(courant));

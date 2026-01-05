@@ -13,8 +13,6 @@ typedef struct Regle {
     struct Regle *suiv;
 } Regle;
 
-/* --- FONCTIONS DU SUJET (TAD REGLE) --- */
-
 /* 1. Créer une règle vide (sans conclusion ni prémisse) */
 Regle* creerRegleVide();
 
@@ -39,10 +37,14 @@ char* tetePremisse(Regle *r);
 /* 8. Accéder à la conclusion */
 char* accederConclusion(Regle *r);
 
+/* Accéder à la première règle de la liste (Tête de la base) */
+Regle* accesTeteBase(Regle *base);
 
-/* --- FONCTIONS UTILITAIRES EXISTANTES (pour les listes de règles) --- */
+
+/* Ajouter une règle */
 void ajouterRegle(Regle **liste, Regle *nouvelle);
+
+/* Libérer une règle */
 void libererRegles(Regle *liste);
-/* (Garde tes anciennes fonctions comme creerCondition si besoin en interne) */
 
 #endif

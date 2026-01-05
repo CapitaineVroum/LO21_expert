@@ -111,6 +111,10 @@ void ajouterRegle(Regle **liste, Regle *nouvelle) {
     }
 }
 
+Regle* accesTeteBase(Regle *base) {
+    return base;
+}
+
 void supprimerRegleParIndex(Regle **liste, int index) {
     if (*liste == NULL || index < 1) return;
 
